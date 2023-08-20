@@ -1,2 +1,2 @@
-# example-NavBar
+# exampleNavBar
 Responsive NavBar
