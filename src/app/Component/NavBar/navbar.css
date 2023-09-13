@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lumanosimo&family=Poppins:ital,wght@0,400;0,500;1,600&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.navBar{
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    padding: 1rem;
+    font-size: 25px;
+    z-index: 2;
+    color: white;
+}
+.navBarLogo{
+    position: absolute;
+    left: 15%;
+    font-size: 24px;
+}
+.navBarLogo span{
+    font-family: 'Lumanosimo', cursive;
+    font-size: 48px;
+    text-shadow: 3px 4px 19px rgba(255, 255, 255, 1);
+
+}
+.navBarMenu{
+    min-width: 400px;
+    width: 100%;
+}
+.navBarMenu ul {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    column-gap: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .navBarLogo{
+        left:5%
+    }
+    .navBarMenu ul {
+        
+        justify-content:end;
+        margin-right: 10%;
+        
+    }
+    
+}
+
+@media only screen and (max-width: 900px) {
+    .navBar{
+        font-size:20px;
+    }
+    .navBarLogo{
+       font-size: 18px;
+    }
+    .navBarLogo span{
+        font-size: 35px;
+    }
+    
+    .navBarMenu ul {
+        justify-content:end;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+
+}
