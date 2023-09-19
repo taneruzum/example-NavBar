@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lumanosimo&family=Poppins:ital,wght@0,400;0,500;1,600&display=swap');
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
 
-.navBar{
+.navBar {
     position: absolute;
     top: 0;
 
@@ -20,59 +21,96 @@
     z-index: 2;
     color: white;
 }
-.navBarLogo{
+
+.navBarLogo {
     position: absolute;
     left: 15%;
     font-size: 24px;
+    cursor: pointer;
 }
-.navBarLogo span{
+
+.navBarLogo span {
     font-family: 'Lumanosimo', cursive;
     font-size: 48px;
     text-shadow: 3px 4px 19px rgba(255, 255, 255, 1);
 
 }
-.navBarMenu{
+
+.navBarMenu {
     min-width: 400px;
     width: 100%;
 }
+
 .navBarMenu ul {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     column-gap: 10px;
 }
 
+li {
+    position: relative;
+    text-shadow: 2px 2px 0px black;
+
+    transition: all 0.1s;
+    /** hover efektinin hemen kapanmaması için */
+}
+
+li:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+li::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 3px;
+    right: 0;
+    bottom: 0;
+    background-color: #ff3c78;
+    border-radius: 4px;
+
+    transition: all 0.4s ease;
+}
+
+li:hover::after {
+    left: 0;
+    width: 100%;
+
+}
+
 @media only screen and (max-width: 1200px) {
-    .navBarLogo{
-        left:5%
+    .navBarLogo {
+        left: 5%
     }
+
     .navBarMenu ul {
-        
-        justify-content:end;
+
+        justify-content: end;
         margin-right: 10%;
-        
+
     }
-    
+
 }
 
 @media only screen and (max-width: 900px) {
-    .navBar{
-        font-size:20px;
+    .navBar {
+        font-size: 20px;
     }
-    .navBarLogo{
-       font-size: 18px;
+
+    .navBarLogo {
+        font-size: 18px;
     }
-    .navBarLogo span{
+
+    .navBarLogo span {
         font-size: 35px;
     }
-    
+
     .navBarMenu ul {
-        justify-content:end;
+        justify-content: end;
         margin-right: 0;
     }
 }
 
-@media only screen and (max-width: 600px) {
-    
-
-}
+@media only screen and (max-width: 600px) {}

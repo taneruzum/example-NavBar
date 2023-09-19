@@ -17,7 +17,7 @@ function Slider() {
         spaceBetween={40}
         slidesPerView={1}
         navigation
-        autoplay={{ delay: 3000,disableOnInteraction:false}}
+        //autoplay={{ delay: 3000,disableOnInteraction:false}}
         loop={true}
         
         >
